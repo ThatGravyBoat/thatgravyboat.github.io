@@ -1,0 +1,14 @@
+{
+	"title": "ThatGravyBoat",
+	"height": 640,
+	"width": 640,
+	"thumbnail_height": 640,
+	"thumbnail_width": 640,
+	"version": "1.0",
+	"provider_name": "ThatGravyBoat",
+	"author_url": "https://thatgravyboat.github.io/thatgravyboat/",
+	"type": "video",
+	"thumbnail_url": "https://thatgravyboat.github.io/thatgravyboat/logo.png",
+	"author_name": "ThatGravyBoat",
+	"provider_url": "https://thatgravyboat.github.io/thatgravyboat/"
+}
