@@ -1,90 +1,54 @@
 <html>
 <head>
-    <link rel="icon" 
+<link rel="stylesheet" type="text/css" href="./index.css">
+<script src="index.js"></script>
+<title>ThatGravyBoat</title>
+<link rel="icon" 
     type="image/png" 
     href="favicon.png">
-    <link rel="alternate" type="application/json+oembed" href="https://thatgravyboat.github.io/discord.json">
-<title>ThatGravyBoat</title>
+<link rel="alternate" type="application/json+oembed" href="https://thatgravyboat.github.io/discord.json">
 </head>
-<style>
-
-#background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#logo{
-  position: relative;
-  width: 256px;
-  height: 256px;
-  position: absolute;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  border-radius: 1rem;
-  padding: 10px;
-}
-
-.grid-container > div {
-  text-align: center;
-  color: white;
-  border-radius: 1rem;
-  padding: 20px 0;
-}
-
-#links{
-  cursor: pointer;
-}
-
-
-</style>
 <body>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js" integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/regular.js" integrity="sha384-Uc9toywOA44owltk1MWl0lQZ+L0mBzJkLQcdif6+JtG9izvok9DLJtCZX57Uq3k2" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js" integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js" integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous"></script>
+<div class="background">
+    <div class="topnav">
+        <div class="topnav-left">
+            <div class="discord">
+                <a href="https://github.com/ThatGravyboat">GitHub</a> 
+            </div>
+            <div class="youtube-left">
+                <a href="https://www.youtube.com/channel/UCxfy719W17qtyDFCTsIGYTA/">Youtube</a>
+            </div>
+        </div>
 
+        <div class="logo">
+            <h1 class="logoText">ThatGravyBoat</h1>
+        </div>
 
-    <img id="background" src="background.png">
-    <img src="logo.png" id="logo">
-    <div class="grid-container" style="position: absolute; left: 50%; top: 65%; transform: translate(-50%, -50%);">
-      <div>
-        <span id="links" onclick="openDiscord();" aria-hidden="true"  style="font-size: 115px;">
-          <i class="fab fa-discord"></i>
-        </span>
-      </div>
-      <div>
-          <span onclick="openTwitter();" id="links" aria-hidden="true"  style="font-size: 125px;">
-            <i class="fab fa-twitter-square"></i>
-          </span>
-      </div>
-      <div>
-          <span onclick="openTwitch();" id="links" aria-hidden="true" style="font-size: 125px;">
-             <i class="fab fa-twitch"></i>
-          </span>
-      </div>
+        <div class="topnav-right">
+            <div class="twitter">
+                <a href="https://twitter.com/thatgravyboat">Twitter</a>
+            </div>
+            <div class="twitch">
+                <a href="https://twitch.tv/thatgravyboat">Twitch</a>
+            </div>
+        </div>
     </div>
-
-    <script>
-      function openTwitter(){
-        window.open("https://twitter.com/thatgravyboat");
-      }
-      function openDiscord(){
-        window.open("https://discord.gg/kjCnz2m");
-      }
-      function openTwitch(){
-        window.open("https://www.twitch.tv/thatgravyboat");
-      }
-    </script>
-
+    
+    <div class="centerText">
+        <div class="titleHead">
+            <h1 class="headHeader">Hello im ThatGravyBoat</h1>
+        </div>
+        <div class="bodyText">
+            <h2 class="konami">Im a dude on the internet that does everything from creating small little website for streamers on twitch to running tournaments for the game Darwin Project.</h2>
+        </div>
+        <div class="title">
+            <h1 class="titleHeader">-About-</h1>
+            <p class="titleSub">Last updated: 2/17/2020</p>
+        </div>
+        <div class="bodyText">
+            <h2 class="konami">I work on plenty of projects some public some not but most are public on my <u><a href="https://github.com/ThatGravyboat">github</a></u>, if you would like to go check them out. I also have 1 twitch extension for the Darwin pro League tournament and scrim discord which im an administrator for, the extension displays tournament information scrim schedules, times, and organizers. The other extension I have but is currently in Review is Beat Score a panel to display beat saber stats gather from scoresaber.</h2>
+        </div>
+    </div>
+</div>
 </body>
 </html>

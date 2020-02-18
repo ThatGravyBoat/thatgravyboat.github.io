@@ -1,0 +1,138 @@
+    body {
+        margin: 0;
+        background-color: rgb(35, 35, 35);
+        height: 100%;
+    }
+    .topnav {
+        height: 75px;
+        position: relative;
+        overflow: hidden;
+        background-color:white;
+    }
+    .topnav a {
+        float: left;
+        height: 30%;
+        line-height: 1;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav-right div:hover {
+        border-bottom: 2px solid #ff3838;
+    }
+    .topnav-left div:hover {
+        border-bottom: 2px solid #ff3838;
+    }
+    .topnav div:hover  > a {
+        color: rgb(80, 80, 80);
+    }
+    .logo {
+        float: left;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .logoText {
+        color: black;
+    }
+    .topnav-right {
+        float: right;
+        width: 40%;
+    }
+    .topnav-left {
+        float: left;
+        width: 40%;
+    }
+    .topnav-right > div {
+        float: right;
+        padding: 25px 64px;
+    }
+    .topnav-right > div > a {
+        text-align: center;
+        color: black;
+        width: 2.5%;
+    }
+    .topnav-left > div {
+        float: left;
+        padding: 25px 64px;
+    }
+    .topnav-left > div >  a {
+        text-align: center;
+        color: black;
+        width: 2.5%;
+    }
+    .title{
+        color: white;
+        font-size: 100px;
+        top: 5%;
+        margin: auto;
+        width: 50%;
+        border: 2px solid #ffffff;
+        background-color: #414142;
+    } 
+    .titleHead{
+        color: white;
+        font-size: 100px;
+        top: 5%;
+        margin: auto;
+        width: 50%;
+        border: 2px solid #ffffff;
+        background-color: #414142;
+    } 
+    .headerLogo {
+        padding-left: 5%;
+    }
+    .titleHeader {
+        padding-left: 100px;
+        font-size: 75px;
+    }
+    .headHeader {
+        line-height: 1;
+        padding-left: 100px;
+        font-size: 50px;
+        position: static;
+    }
+    .titleSub {
+        padding-left: 100px;
+        font-size: 25px;
+    }
+    @font-face {
+        font-family: rift soft;
+        src: url(RiftSoft-BoldItalic.woff2) format("woff2");
+        font-weight: 700;
+        font-style: italic
+    }
+    h, h1, h2, h3, h4, a, p, span, strong {
+        line-height: 0.25;
+        font-family: rift soft;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-style: italic;
+        color: white;
+    }
+    .centerText {
+        margin-top: 5%;
+        width: 100%;
+    }
+    .bodyText {
+        margin-top: 5%;
+        margin: auto;
+        width: 48%;
+        border: 2px solid #ffffff;
+        background-color: #282829;
+        text-align: center;
+    }
+    .bodyText p {
+        padding: 20px;
+        line-height: 1.5;
+    }
+    .bodyText h2 {
+        line-height: 1;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .rainbowText {
+        background: linear-gradient(to left, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
