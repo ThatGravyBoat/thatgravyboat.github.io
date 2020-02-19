@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
     body {
         margin: 0;
         background-color: rgb(35, 35, 35);
@@ -96,18 +97,12 @@
         padding-left: 100px;
         font-size: 25px;
     }
-    @font-face {
-        font-family: rift soft;
-        src: url(RiftSoft-BoldItalic.woff2) format("woff2");
-        font-weight: 700;
-        font-style: italic
-    }
     h, h1, h2, h3, h4, a, p, span, strong {
         line-height: 0.25;
-        font-family: rift soft;
+        font-family: 'Squada One', cursive;
         text-transform: uppercase;
-        font-weight: 600;
-        font-style: italic;
+        font-weight:normal;
+        font-style: normal;
         color: white;
     }
     .centerText {
