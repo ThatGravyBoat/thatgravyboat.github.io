@@ -18,10 +18,10 @@
         font-size: 17px;
     }
     .topnav-right div:hover {
-        border-bottom: 2px solid #ff3838;
+        border-bottom: 2px solid #ff0055;
     }
     .topnav-left div:hover {
-        border-bottom: 2px solid #ff3838;
+        border-bottom: 2px solid #ff0055;
     }
     .topnav div:hover  > a {
         color: rgb(80, 80, 80);
@@ -35,6 +35,7 @@
     }
     .logoText {
         color: black;
+        cursor: pointer;
     }
     .topnav-right {
         float: right;
@@ -86,6 +87,7 @@
     .titleHeader {
         padding-left: 100px;
         font-size: 75px;
+        line-height: 1;
     }
     .headHeader {
         line-height: 1;
@@ -126,8 +128,51 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+    a {
+        line-height: 1;
+    }
     .rainbowText {
         background: linear-gradient(to left, green, yellow, orange, red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .titleSub1 {
+        text-align: center;
+        font-size: 25px;
+    }
+    .titleHeader1 {
+        text-align: center;
+        font-size: 75px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .titleHeader1:hover {
+        text-decoration: underline #ff0055;
+    }
+    .underLine {
+        text-decoration: underline white;
+    }
+    .underLine:hover {
+        text-decoration: underline #ff0055;
+    }
+    .post {
+        padding-bottom: 50px;
+    }
+    .offsite > svg {
+        display: none;
+    }
+    .offsite:hover > svg {
+        display: initial;
+    }
+    .previewImage {
+        padding: 10px;
+    }
+    .previewPost {
+        display: flex;
+    }
+    @media only screen and (max-width: 1215px) {
+        .previewImage {
+            width: 160px;
+        }
     }

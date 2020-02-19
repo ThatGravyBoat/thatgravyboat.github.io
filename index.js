@@ -33,3 +33,10 @@
     audio.volume = 0.1;
     audio.play();
   }
+
+  function changePage(page) {
+    window.location.href = page;
+  }
+  function openLink(link) {
+    window.open(link, '_blank');
+  }
