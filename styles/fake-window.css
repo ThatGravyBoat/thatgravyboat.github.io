@@ -1,0 +1,101 @@
+.fake-window {
+    width: 50%;
+    aspect-ratio: 16/9;
+
+    border: 2px solid var(--card-color);
+    border-radius: 0.5rem;
+}
+
+.fake-header {
+    height: 0.75rem;
+
+    background-color: var(--card-color);
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.25rem 0.25rem 0 0;
+
+    padding: 0.375rem;
+}
+
+.fake-window-controls {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 100%;
+
+    margin-right: 0.5rem;
+}
+
+.fake-header > p {
+    padding: 0;
+    margin: 0;
+    color: var(--text-title-color);
+
+    font-size: 0.75rem;
+    line-height: 100%;
+
+    width: calc(100% - (3.75rem * 2));
+
+    text-align: center;
+}
+
+.fake-body {
+    padding: 1rem;
+    font-family: monospace;
+}
+
+.fake-body > p {
+    padding: 0;
+    color: var(--text-title-color);
+
+    margin: 0.5rem 0;
+}
+
+.fake-body a {
+    display: inline-block;
+    color: var(--accent-hover-color);
+    text-decoration: none;
+}
+
+.fake-body a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0;
+    height: 1px;
+    background: var(--accent-hover-color);
+    transition: width .3s ease;
+}
+
+.fake-body a:hover::after {
+    width: 100%;
+}
+
+.fake-body a:visited {
+    text-decoration: none;
+    color: var(--accent-hover-color);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .fake-window {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fake-window {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .fake-header {
+        display: none;
+    }
+    .fake-window {
+        width: 100%;
+        border: none;
+        word-break: break-word;
+    }
+}

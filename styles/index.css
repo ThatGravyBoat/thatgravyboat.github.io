@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+html.lightmode {
+    --background-color: #FFFFFF;
+    --container-color: #F1F1F1;
+    --card-color: #E1E1E1;
+
+    --text-title-color: #292929;
+    --text-paragraph-color: #424245;
+
+    --button-color: #bdbdbd;
+    --button-transparent-color: rgba(189, 189, 189, 0.5);
+    --button-hover-color: #ababab;
+
+    --accent-color: #1E90FF;
+    --accent-hover-color: #0070E0;
+}
+
+html:not(.lightmode) {
+    --background-color: #131517;
+    --container-color: #1A1C20;
+    --card-color: #27282C;
+
+    --text-title-color: #FAF9F6;
+    --text-paragraph-color: #727478;
+
+    --button-color: #27282C;
+    --button-transparent-color: rgba(39, 40, 44, 0.5);
+    --button-hover-color: #35373B;
+
+    --accent-color: #1E90FF;
+    --accent-hover-color: #0070E0;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(180deg, var(--container-color) 0%, var(--background-color) 55%, var(--background-color) 100%);
+}
+
+main {
+    padding-top: 1.5rem;
+    height: calc(100vh - 1.5rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html:not(.lightmode) .light-mode-only {
+    display: none;
+}
+
+html.lightmode .dark-mode-only {
+    display: none;
+}

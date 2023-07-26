@@ -1,0 +1,236 @@
+nav {
+    position: fixed;
+    height: 1.5rem;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    color: var(--text-title-color);
+    background-color: var(--card-color );
+
+    font-size: small;
+
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-left {
+    padding-left: 0.75rem;
+}
+
+.nav-right {
+    padding-right: 0.75rem;
+}
+
+.nav > * {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    height: 1rem;
+    padding: 0.25rem;
+}
+
+.nav svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.nav > a {
+    color: var(--text-title-color);
+    text-decoration: none;
+
+    font-size: x-small;
+    line-height: 1rem;
+}
+
+.nav > a:visited {
+    color: var(--text-title-color);
+}
+
+.nav > a:focus, .nav > a:hover {
+    outline: none;
+    background-color: var(--button-hover-color);
+    border-radius: 0.25rem;
+}
+
+.nav-title {
+    font-size: small;
+    line-height: 1rem;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+#clock {
+    font-size: x-small;
+    line-height: 1rem;
+}
+
+#play-icon {
+    position: relative;
+}
+
+#play-icon:hover {
+    cursor: pointer;
+}
+
+#play-icon:hover, #play-icon[data-open] {
+    background-color: var(--button-hover-color);
+    border-radius: 0.25rem;
+}
+
+#play-icon[data-open] > div {
+    visibility: visible;
+    opacity: 100;
+    transition: none;
+}
+
+#play-icon > div {
+    cursor: default;
+    position: absolute;
+    left: -12.75rem;
+    height: 4rem;
+    width: 13rem;
+
+    background-color: var(--button-color);
+    border-radius: 0.25rem;
+    border: 1px solid var(--button-hover-color);
+
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.25s, opacity 0.25s linear;
+}
+
+#song-image {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.song-info {
+    width: calc(100% - 4.5rem);
+    display: grid;
+    grid-template-rows: 2rem 1rem 1rem;
+    user-select: none;
+}
+
+.song-info > * {
+    margin: 0;
+    padding: 0;
+
+    text-overflow: ellipsis;
+    height: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.listening-to {
+    font-weight: lighter;
+}
+
+#song-title {
+    font-size: x-small;
+}
+
+#song-artist {
+    font-size: xx-small;
+    font-weight: lighter;
+}
+
+#theme-toggle {
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover-color);
+    border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        grid-template-columns: 70% 30%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #link-mastodon {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    nav {
+        grid-template-columns: 60% 40%;
+    }
+
+    #link-bluesky {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        grid-template-columns: 90% 10%;
+    }
+
+    #clock {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #link-twitter {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #link-modrinth, #link-curseforge {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #link-github {
+        display: none;
+    }
+    #play-icon {
+        position: unset;
+    }
+
+    #play-icon > div {
+        left: 0;
+        right: 0;
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    .nav-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 175px) {
+    nav {
+        grid-template-columns: 100%;
+    }
+    .nav-right {
+        display: none;
+    }
+    .nav-left {
+        justify-content: center;
+    }
+}
+
