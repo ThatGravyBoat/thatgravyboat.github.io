@@ -135,7 +135,7 @@ nav {
 }
 
 .listening-to {
-    font-weight: lighter;
+    font-weight: 100;
 }
 
 #song-title {
@@ -144,7 +144,7 @@ nav {
 
 #song-artist {
     font-size: xx-small;
-    font-weight: lighter;
+    font-weight: 100;
 }
 
 #theme-toggle {
