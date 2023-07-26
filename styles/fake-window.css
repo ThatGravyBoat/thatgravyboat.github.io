@@ -1,6 +1,7 @@
 .fake-window {
     width: 50%;
     aspect-ratio: 16/9;
+    max-height: 90%;
 
     border: 2px solid var(--card-color);
     border-radius: 0.5rem;
