@@ -1,8 +1,6 @@
 
 const fetchSongData = () => {
-    const URL = "https%3A%2F%2Fspotify-github-profile.vercel.app%2Fapi%2Fview.svg%5C%3Fuid%3D0o7l6ki4nbj69g9vvf0zojdi5";
-    const url = 'https://corsproxy.io/?' + URL;
-    fetch(url)
+    fetch("https://spotify.thatgravyboat.workers.dev/")
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser();
