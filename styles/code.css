@@ -1,0 +1,30 @@
+code {
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    background-color: var(--card-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+code > * {
+    padding: 0.25rem;
+}
+
+code > *:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+code > *:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.diff-red {
+    background-color: rgba(255, 0, 0, 0.5);
+    filter: brightness(1.25);
+}
+
+.diff-green {
+    background-color: rgba(0, 128, 0, 0.5);
+    filter: brightness(1.25);
+}
