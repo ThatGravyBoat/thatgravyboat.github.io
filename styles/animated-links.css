@@ -1,0 +1,23 @@
+.animated-link {
+    display: inline-block;
+    color: var(--text-paragraph-color);
+    text-decoration: none;
+}
+
+.animated-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--text-paragraph-color);
+    transition: width .3s ease;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}
+
+.animated-link:visited {
+    text-decoration: none;
+    color: var(--text-paragraph-color);
+}
