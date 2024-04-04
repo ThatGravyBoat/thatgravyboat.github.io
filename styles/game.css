@@ -1,0 +1,63 @@
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1rem;
+}
+
+.cell {
+    width: 2rem;
+    height: 2rem;
+
+    background-color: #1E90FF;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.flag {
+    color: white;
+}
+
+.mine {
+    background-color: #FF4136;
+}
+
+.safe {
+    background-color: #035196;
+}
+
+.safe[data-neighbors="1"] {
+    color: white;
+}
+
+.safe[data-neighbors="2"] {
+    color: lawngreen;
+}
+
+.safe[data-neighbors="3"] {
+    color: orangered;
+}
+
+.safe[data-neighbors="4"] {
+    color: rebeccapurple;
+}
+
+.safe[data-neighbors="5"] {
+    color: orange;
+}
+
+.win {
+    background-color: #2ECC40;
+}
