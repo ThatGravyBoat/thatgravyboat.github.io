@@ -215,6 +215,10 @@ document.addEventListener("keydown", (event) => {
     } else {
         konamiIndex = 0;
     }
+
+    if (opened && event.key === "r") {
+        start();
+    }
 });
 
 
