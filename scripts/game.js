@@ -4,12 +4,11 @@ const FLAG_SVG = `
 </svg>
 `;
 
-
-
 const mines = [];
 let cells = [];
 let exposed = true;
 let placed = false;
+let timer;
 
 const loopAround = (x, y, callback) => {
     for (let i = Math.max(0, x - 1); i < Math.min(x + 2, mines.length); i++) {
@@ -41,14 +40,18 @@ function placeMines(posX, posY) {
     placed = true;
 }
 
+const end = () => {
+    clearInterval(timer);
+    exposed = true;
+}
+
 function expose() {
     for (let cell of cells) {
         if (mines[cell.game.x][cell.game.y]) {
             cell.classList.add("mine");
         }
     }
-    exposed = true;
-
+    end();
     setTimeout(start, 3000);
 }
 
@@ -58,15 +61,28 @@ const win = () => {
             return;
         }
     }
-    exposed = true;
+    end();
     cells.forEach(cell => cell.classList.add("win"));
     setTimeout(start, 3000);
+}
+
+const updateTime = (time, startTime) => {
+    const difference = Date.now() - startTime;
+    const minutes = Math.floor(difference / 60000);
+    const seconds = Math.floor((difference % 60000) / 1000);
+    time.innerText = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+}
+
+const startTimer = (time) => {
+    const startTime = Date.now();
+    timer = setInterval(() => updateTime(time, startTime), 1000);
 }
 
 function start() {
     exposed = false;
     placed = false;
     cells = [];
+    clearInterval(timer);
     for (let i = 0; i < 9; i++) {
         mines[i] = [];
         for (let j = 0; j < 9; j++) {
@@ -77,6 +93,12 @@ function start() {
     const body = document.getElementById("body");
     body.innerHTML = "";
     body.classList.add("game");
+
+    const time = document.createElement("h4");
+    time.classList.add("time");
+    time.id = "time";
+    time.innerText = "00:00";
+    body.appendChild(time);
 
     const board = document.createElement("div");
     board.classList.add("board");
@@ -98,6 +120,7 @@ function start() {
                     cell.classList.add("mine");
                     expose();
                 } else {
+                    if (!placed) startTimer(time)
                     placeMines(x, y);
                     const minesAround = getMinesAround(x, y);
                     cell.classList.add("safe");

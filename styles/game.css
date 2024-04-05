@@ -1,7 +1,9 @@
 .game {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .board {
@@ -60,4 +62,9 @@
 
 .win {
     background-color: #2ECC40;
+}
+
+#time {
+    color: var(--text-title-color);
+    margin: 0;
 }
