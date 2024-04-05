@@ -8,7 +8,11 @@ const mines = [];
 let cells = [];
 let exposed = true;
 let placed = false;
+let startTime;
 let timer;
+let opened = false;
+let username;
+let header;
 
 const loopAround = (x, y, callback) => {
     for (let i = Math.max(0, x - 1); i < Math.min(x + 2, mines.length); i++) {
@@ -63,6 +67,7 @@ const win = () => {
     }
     end();
     cells.forEach(cell => cell.classList.add("win"));
+    leaderboardWin();
     setTimeout(start, 3000);
 }
 
@@ -74,11 +79,12 @@ const updateTime = (time, startTime) => {
 }
 
 const startTimer = (time) => {
-    const startTime = Date.now();
+    startTime = Date.now();
     timer = setInterval(() => updateTime(time, startTime), 1000);
 }
 
 function start() {
+    opened = true;
     exposed = false;
     placed = false;
     cells = [];
@@ -94,11 +100,16 @@ function start() {
     body.innerHTML = "";
     body.classList.add("game");
 
+    header = document.createElement("div");
+    header.classList.add("header");
+
     const time = document.createElement("h4");
     time.classList.add("time");
     time.id = "time";
     time.innerText = "00:00";
-    body.appendChild(time);
+    header.appendChild(time);
+
+    body.appendChild(header);
 
     const board = document.createElement("div");
     board.classList.add("board");
@@ -150,26 +161,59 @@ function start() {
     }
 
     body.appendChild(board);
+
+    if (username) leaderboard();
 }
 
-const konmiCode = [
+const leaderboard = () => {
+    const oldName = username?.value || "";
+
+    username = document.createElement("input");
+    username.type = "text";
+    username.placeholder = "Username";
+    username.value = oldName;
+    header.appendChild(username);
+}
+
+const leaderboardWin = () => {
+    if (!username) return;
+    const time = Date.now() - startTime;
+    const minutes = Math.floor(time / 60000);
+    const seconds = Math.floor((time % 60000) / 1000);
+    fetch("https://minesweeper-leaderboard.thatgravyboat.workers.dev/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            user: username.value,
+            score: `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+        })
+    });
+}
+
+const konamiCode = [
     "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
     "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
     "b", "a"
 ]
-let konmiIndex = 0;
+let konamiIndex = 0;
 
 document.addEventListener("keydown", (event) => {
-    if (konmiCode[konmiIndex] === event.key) {
-        konmiIndex++;
-        if (konmiIndex === konmiCode.length) {
-            konmiIndex = 0;
-            start();
+    if (konamiCode[konamiIndex] === event.key) {
+        konamiIndex++;
+        if (konamiIndex === konamiCode.length) {
+            konamiIndex = 0;
+            if (opened) {
+                leaderboard();
+            } else {
+                start();
+            }
         }
-    } else if (event.key === konmiCode[0]) {
-        konmiIndex = 1;
+    } else if (event.key === konamiCode[0]) {
+        konamiIndex = 1;
     } else {
-        konmiIndex = 0;
+        konamiIndex = 0;
     }
 });
 
