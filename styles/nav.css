@@ -190,6 +190,12 @@ nav {
 }
 
 @media only screen and (max-width: 425px) {
+    #link-discord {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     #link-twitter {
         display: none;
     }
