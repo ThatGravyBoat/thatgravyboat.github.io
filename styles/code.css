@@ -2,6 +2,7 @@ code {
     border-radius: 0.5rem;
     padding: 0.25rem;
     background-color: var(--card-color);
+    color: var(--text-paragraph-color);
 
     display: flex;
     flex-direction: column;
@@ -20,9 +21,11 @@ code > *:last-child {
 }
 
 .diff-red {
-    background-color: rgba(255, 50, 42, 0.5);
+    color: var(--text-title-color);
+    background-color: #c93c37;
 }
 
 .diff-green {
-    background-color: rgba(50, 128, 0, 0.5);
+    color: var(--text-title-color);
+    background-color: #347d39;
 }
