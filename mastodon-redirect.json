@@ -1,23 +1,23 @@
 {
-  "subject": "acct:thatgravyboat@anvil.social",
+  "subject": "acct:thatgravyboat@floss.social",
   "aliases": [
-    "https://anvil.social/@thatgravyboat",
-    "https://anvil.social/users/thatgravyboat"
+    "https://floss.social/@thatgravyboat",
+    "https://floss.social/users/thatgravyboat"
   ],
   "links": [
     {
       "rel": "http://webfinger.net/rel/profile-page",
       "type": "text/html",
-      "href": "https://anvil.social/@thatgravyboat"
+      "href": "https://floss.social/@thatgravyboat"
     },
     {
       "rel": "self",
       "type": "application/activity+json",
-      "href": "https://anvil.social/users/thatgravyboat"
+      "href": "https://floss.social/users/thatgravyboat"
     },
     {
       "rel": "http://ostatus.org/schema/1.0/subscribe",
-      "template": "https://anvil.social/authorize_interaction?uri={uri}"
+      "template": "https://floss.social/authorize_interaction?uri={uri}"
     }
   ]
 }
