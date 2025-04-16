@@ -11,7 +11,7 @@ const fetchSongData = () => {
 
             document.getElementById("song-title").innerText = song.innerText;
             document.getElementById("song-artist").innerText = artist.innerText + " - " + song.innerText;
-            document.getElementById("song-image").src = cover.src;
+            document.getElementById("song-image").src = cover ? cover.src : "../pfp-small.png";
         })
         .catch(console.error);
 }
